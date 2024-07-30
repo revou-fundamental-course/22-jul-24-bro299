@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografi Profesional</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="assets/favicon.png" type="assets/favicon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a class="navbar-brand" id="siteName" href="#">ミFG彡</a>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="navbar-collapse">
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#layanan-kami">Layanan Kami</a></li>
+                <li><a href="#hubungi-kami">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="hero">
+        <div class="hero-slides">
+            <div class="hero-slide">
+                <h1>Abadikan Momen Anda dengan Kami</h1>
+                <p>Kepuasan Anda adalah Prioritas Kami</p>
+                <button class="btn-primary">Pesan Sekarang</button>
+                <button class="btn-secondary">Lihat Portfolio</button>
+            </div>
+            <div class="hero-slide">
+                <h1>Fotografi Berkualitas Tinggi</h1>
+                <p>Mengabadikan Momen Berharga Anda</p>
+                <button class="btn-primary">Pesan Sekarang</button>
+                <button class="btn-secondary">Lihat Portfolio</button>
+            </div>
+            <div class="hero-slide">
+                <h1>Layanan Fotografi Profesional</h1>
+                <p>Memenuhi Semua Kebutuhan Fotografi Anda</p>
+                <button class="btn-primary">Pesan Sekarang</button>
+                <button class="btn-secondary">Lihat Portfolio</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- banner -->
+    <div class="banner">
+        <div class="slides">
+            <img src="assets/banner/banner1.jpg" alt="Banner 1">
+            <img src="assets/banner/banner2.jpg" alt="Banner 2">
+            <img src="assets/banner/banner3.jpg" alt="Banner 3">
+            <img src="assets/banner/banner4.jpg" alt="Banner 4">
+            <img src="assets/banner/banner5.jpg" alt="Banner 5">
+            <img src="assets/banner/banner6.jpg" alt="Banner 6">
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="left-col">
+            <div class="image-container">
+                <img src="assets/2.jfif" alt="Foto Profesional" class="img-medium">
+            </div>
+            <div class="quote">
+                "Foto-foto saya terlihat luar biasa bersama Fotografi Pro."
+            </div>
+            <div class="author-info">
+                <div class="author">
+                    Florence Hughes
+                </div>
+                <p>Ibu Rumah Tangga, 28</p>
+            </div>
+            <h2 class="subsection-title">
+                Manfaat Memilih Layanan Fotografi Kami:
+              </h2>
+              <div class="feature-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="camera"></i>
+                  </div>
+                  <div class="feature-description">Foto Berkualitas Tinggi</div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="camera"></i>
+                  </div>
+                  <div class="feature-description">Peralatan Profesional</div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="camera"></i>
+                  </div>
+                  <div class="feature-description">Tim Berpengalaman</div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="camera"></i>
+                  </div>
+                  <div class="feature-description">Paket Kustom</div>
+                </div>
+              </div>
+        </div>
+        <div class="right-col">
+            <form id="contactForm">
+                <h2>Hubungi Kami</h2>
+                <p>Admin akan menghubungi Anda dalam 1x24 jam setelah data kami terima.</p>
+                <label for="name">Nama Anda:</label>
+                <input type="text" id="name" placeholder="Nama depan dan belakang" required>
+                <label for="phone">Nomor HP Anda:</label>
+                <input type="tel" id="phone" placeholder="Nomor HP" pattern="[0-9]{10,13}" required>
+                <label for="interest">Apa yang Anda minati?</label>
+                <select id="interest" required>
+                    <option value="">Pilih opsi</option>
+                    <option value="option1">Pernikahan</option>
+                    <option value="option2">Event</option>
+                    <option value="option3">Foto Keluarga</option>
+                    <option value="option4">Perusahaan</option>
+                    <option value="option5">Foto Kreatif</option>
+                </select>
+                <button type="submit">KIRIM</button>
+            </form>
+        </div>
+    </div>
+    
+    <section id="layanan-kami" class="features">
+        <div class="feature">
+            <img src="assets/image/image1.jfif" alt="Pernikahan" class="feature-image">
+            <i class="fas fa-camera-retro"></i>
+            <div class="fo-content">
+                <h2>Pernikahan</h2>
+                <p>Abadikan momen spesial pernikahan Anda dengan fotografi profesional kami.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <img src="assets/image/image2.jpeg" alt="Event" class="feature-image">
+            <i class="fas fa-calendar-alt"></i>
+            <div class="fo-content">
+                <h2>Event</h2>
+                <p>Kami siap mengabadikan momen berharga di setiap acara penting Anda.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <img src="assets/image/image3.jfif" alt="Foto Keluarga" class="feature-image">
+            <i class="fas fa-users"></i>
+            <div class="fo-content">
+                <h2>Foto Keluarga</h2>
+                <p>Kenangan keluarga Anda akan selalu diingat dengan foto berkualitas tinggi.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <img src="assets/image/image4.jfif" alt="Perusahaan" class="feature-image">
+            <i class="fas fa-building"></i>
+            <div class="fo-content">
+                <h2>Perusahaan</h2>
+                <p>Kami menyediakan jasa fotografi untuk kebutuhan korporat dan bisnis Anda.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <img src="assets/image/image5.jpeg" alt="Foto Kreatif" class="feature-image">
+            <i class="fas fa-paint-brush"></i>
+            <div class="fo-content">
+                <h2>Foto Kreatif</h2>
+                <p>Eksplorasi kreativitas Anda dengan layanan foto artistik dari kami.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="hubungi-kami" class="call-to-action">
+        <div class="fo-content">
+            <h1>Segera Hubungi Kami</h1>
+            <p>Jangan lewatkan kesempatan untuk mengabadikan momen Anda dengan fotografer profesional kami. Hubungi kami sekarang juga!</p>
+            <a href="#" class="btn">HUBUNGI SEKARANG</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Fotografi Pro</p>
+    <ul>
+        <li><a href="#">Syarat dan Ketentuan</a></li>
+        <li><a href="#">Kebijakan Privasi</a></li>
+    </ul>
+    <p>&copy; 2024 Fotografi Pro</p>
+</footer>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"
+    integrity="sha512-24XP4a9KVoIinPFUbcnjIjAjtS59PUoxQj3GNVpWc86bCqPuy3YxAcxJrxFCxXe4GHtAumCbO2Ze2bddtuxaRw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    feather.replace()
+  </script>
+<script src="js/script.js"></script>
+</body>
+</html>
