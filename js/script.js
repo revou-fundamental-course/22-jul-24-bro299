@@ -1,47 +1,72 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
+    // Fungsi filter portofolio
+    const buttons = document.querySelectorAll('.portfolio-filter button');
+    const items = document.querySelectorAll('.portfolio-item');
 
-    menuToggle.addEventListener('click', function() {
-        navbarCollapse.classList.toggle('show');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            items.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
     });
 
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slides img');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
+    // Scroll halus ke form kontak saat tombol "Pesan Sekarang" diklik
+    const pesanSekarangButtons = document.querySelectorAll('.btn-primary[id^="pesanSekarang"]');
+    pesanSekarangButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
         });
-    }
+    });
 
-    function nextSlide() {
-        slideIndex = (slideIndex + 1) % totalSlides;
-        showSlide(slideIndex);
-    }
-
-    setInterval(nextSlide, 3000);
-
-    // Hero auto slide
-    let heroSlideIndex = 0;
-    const heroSlides = document.querySelectorAll('.hero-slide');
-    const totalHeroSlides = heroSlides.length;
-
-    function showHeroSlide(index) {
-        heroSlides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
+    // Scroll halus ke bagian portofolio saat tombol "Lihat Portofolio" diklik
+    const portofolioButtons = document.querySelectorAll('.btn-secondary[id^="portofolio"]');
+    portofolioButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            document.getElementById('portofolio').scrollIntoView({ behavior: 'smooth' });
         });
-    }
+    });
 
-    function nextHeroSlide() {
-        heroSlideIndex = (heroSlideIndex + 1) % totalHeroSlides;
-        showHeroSlide(heroSlideIndex);
-    }
+    // Fungsi untuk toggle (menampilkan/menyembunyikan) menu pada tampilan mobile
+    window.toggleMenuButton = function() {
+        document.getElementById("menu-list").classList.toggle("show");
+    };
 
-    setInterval(nextHeroSlide, 5000);
+    // Fungsi untuk scroll saat tombol "Get Started" diklik
+    window.getStartButton = function() {
+        const bannerHeight = document.getElementById("hero").clientHeight;
+        const headerHeight = document.getElementsByClassName("header")[0].clientHeight;
+        window.scrollBy(0, bannerHeight - headerHeight);
+    };
 
-    // Form validation
+    // Fungsi slideshow pada bagian hero
+    const heroSlider = document.getElementById("hero-slider");
+    const windowWidth = heroSlider.clientWidth;
+    let index = 1;
+
+    heroSlider.style.transform = `translateX(${-windowWidth * index}px)`;
+
+    setInterval(() => {
+        if (index == 6) return;
+        index++;
+        heroSlider.style.transform = `translateX(${-windowWidth * index}px)`;
+        heroSlider.style.transition = "all 2s ease-in-out";
+    }, 6000);
+
+    heroSlider.addEventListener("transitionend", () => {
+        if (document.getElementById(`slide${index}`).id == "slide6") {
+            heroSlider.style.transition = "none";
+            index = 0;
+            heroSlider.style.transform = `translateX(${-windowWidth * index}px)`;
+        }
+    });
+
+    // Validasi form
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -63,4 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Formulir berhasil dikirim!');
         form.reset();
     });
+
+    // Ganti semua ikon feather
+    feather.replace();
 });

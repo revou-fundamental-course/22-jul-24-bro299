@@ -3,201 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fotografi Profesional</title>
+    <title>FG Pro</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="icon" href="assets/favicon.png" type="assets/favicon">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <a class="navbar-brand" id="siteName" href="#">ミFG彡</a>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="navbar-collapse">
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#layanan-kami">Layanan Kami</a></li>
-                <li><a href="#hubungi-kami">Hubungi Kami</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<main>
-    <section class="hero">
-        <div class="hero-slides">
-            <div class="hero-slide">
-                <h1>Abadikan Momen Anda dengan Kami</h1>
-                <p>Kepuasan Anda adalah Prioritas Kami</p>
-                <button class="btn-primary">Pesan Sekarang</button>
-                <button class="btn-secondary">Lihat Portfolio</button>
-            </div>
-            <div class="hero-slide">
-                <h1>Fotografi Berkualitas Tinggi</h1>
-                <p>Mengabadikan Momen Berharga Anda</p>
-                <button class="btn-primary">Pesan Sekarang</button>
-                <button class="btn-secondary">Lihat Portfolio</button>
-            </div>
-            <div class="hero-slide">
-                <h1>Layanan Fotografi Profesional</h1>
-                <p>Memenuhi Semua Kebutuhan Fotografi Anda</p>
-                <button class="btn-primary">Pesan Sekarang</button>
-                <button class="btn-secondary">Lihat Portfolio</button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- banner -->
-    <div class="banner">
-        <div class="slides">
-            <img src="assets/banner/banner1.jpg" alt="Banner 1">
-            <img src="assets/banner/banner2.jpg" alt="Banner 2">
-            <img src="assets/banner/banner3.jpg" alt="Banner 3">
-            <img src="assets/banner/banner4.jpg" alt="Banner 4">
-            <img src="assets/banner/banner5.jpg" alt="Banner 5">
-            <img src="assets/banner/banner6.jpg" alt="Banner 6">
-        </div>
-    </div>
-    
-    <div class="content">
-        <div class="left-col">
-            <div class="image-container">
-                <img src="assets/2.jfif" alt="Foto Profesional" class="img-medium">
-            </div>
-            <div class="quote">
-                "Foto-foto saya terlihat luar biasa bersama Fotografi Pro."
-            </div>
-            <div class="author-info">
-                <div class="author">
-                    Florence Hughes
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="/assets/logo.png" alt="E-Groceries logo" />
                 </div>
-                <p>Ibu Rumah Tangga, 28</p>
+                <button class="menu-button" id="menu-button" onclick="toggleMenuButton()">
+                    <i data-feather="menu"></i>
+                </button>
+                <ul class="navigation-list" id="menu-list">
+                    <li><a href="#hero" onclick="setTitle(this)">Home</a></li>
+                    <li><a href="#paket-kami" onclick="setTitle(this)">Paket</a></li>
+                    <li><a href="#hubungi-kami" onclick="setTitle(this)">Hubungi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="hero" id="hero">
+            <div class="hero-slider" id="hero-slider">
+                <img id="slide1" src="/assets/banner/banner1.jpg" alt="" />
+                <img id="slide2" src="/assets/banner/banner2.jpg" alt="" />
+                <img id="slide3" src="/assets/banner/banner3.jpg" alt="" />
+                <img id="slide4" src="/assets/banner/banner4.jpg" alt="" />
+                <img id="slide5" src="/assets/banner/banner5.jpg" alt="" />
+                <img id="slide6" src="/assets/banner/banner6.jpg" alt="" />
+                <img id="slide7" src="/assets/banner/banner2.jpg" alt="" />
+                <img id="slide8" src="/assets/banner/banner3.jpg" alt="" />
             </div>
-            <h2 class="subsection-title">
-                Manfaat Memilih Layanan Fotografi Kami:
-              </h2>
-              <div class="feature-list">
-                <div class="feature-item">
-                  <div class="feature-icon">
-                    <i data-feather="camera"></i>
-                  </div>
-                  <div class="feature-description">Foto Berkualitas Tinggi</div>
+            <div class="hero-wrapper">
+                <h1 class="main-title">Abadikan Momen Anda dengan Kami</h1>
+                <p class="hero-description">Kepuasan Anda adalah Prioritas Kami</p>
+                <div class="button-group">
+                    <button class="btn-primary" id="pesanSekarang1">Pesan Sekarang</button>
+                    <button class="btn-secondary" id="portofolio1">Lihat Portofolio</button>
                 </div>
-                <div class="feature-item">
-                  <div class="feature-icon">
-                    <i data-feather="camera"></i>
-                  </div>
-                  <div class="feature-description">Peralatan Profesional</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <div class="image-container">
+                    <img src="assets/2.jfif" alt="Foto Profesional" class="img-medium">
                 </div>
-                <div class="feature-item">
-                  <div class="feature-icon">
-                    <i data-feather="camera"></i>
-                  </div>
-                  <div class="feature-description">Tim Berpengalaman</div>
-                </div>
-                <div class="feature-item">
-                  <div class="feature-icon">
-                    <i data-feather="camera"></i>
-                  </div>
-                  <div class="feature-description">Paket Kustom</div>
-                </div>
-              </div>
-        </div>
-        <div class="right-col">
-            <form id="contactForm">
-                <h2>Hubungi Kami</h2>
-                <p>Admin akan menghubungi Anda dalam 1x24 jam setelah data kami terima.</p>
-                <label for="name">Nama Anda:</label>
-                <input type="text" id="name" placeholder="Nama depan dan belakang" required>
-                <label for="phone">Nomor HP Anda:</label>
-                <input type="tel" id="phone" placeholder="Nomor HP" pattern="[0-9]{10,13}" required>
-                <label for="interest">Apa yang Anda minati?</label>
-                <select id="interest" required>
-                    <option value="">Pilih opsi</option>
-                    <option value="option1">Pernikahan</option>
-                    <option value="option2">Event</option>
-                    <option value="option3">Foto Keluarga</option>
-                    <option value="option4">Perusahaan</option>
-                    <option value="option5">Foto Kreatif</option>
-                </select>
-                <button type="submit">KIRIM</button>
-            </form>
-        </div>
-    </div>
-    
-    <section id="layanan-kami" class="features">
-        <div class="feature">
-            <img src="assets/image/image1.jfif" alt="Pernikahan" class="feature-image">
-            <i class="fas fa-camera-retro"></i>
-            <div class="fo-content">
-                <h2>Pernikahan</h2>
-                <p>Abadikan momen spesial pernikahan Anda dengan fotografi profesional kami.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="assets/image/image2.jpeg" alt="Event" class="feature-image">
-            <i class="fas fa-calendar-alt"></i>
-            <div class="fo-content">
-                <h2>Event</h2>
-                <p>Kami siap mengabadikan momen berharga di setiap acara penting Anda.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="assets/image/image3.jfif" alt="Foto Keluarga" class="feature-image">
-            <i class="fas fa-users"></i>
-            <div class="fo-content">
-                <h2>Foto Keluarga</h2>
-                <p>Kenangan keluarga Anda akan selalu diingat dengan foto berkualitas tinggi.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="assets/image/image4.jfif" alt="Perusahaan" class="feature-image">
-            <i class="fas fa-building"></i>
-            <div class="fo-content">
-                <h2>Perusahaan</h2>
-                <p>Kami menyediakan jasa fotografi untuk kebutuhan korporat dan bisnis Anda.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <img src="assets/image/image5.jpeg" alt="Foto Kreatif" class="feature-image">
-            <i class="fas fa-paint-brush"></i>
-            <div class="fo-content">
-                <h2>Foto Kreatif</h2>
-                <p>Eksplorasi kreativitas Anda dengan layanan foto artistik dari kami.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="hubungi-kami" class="call-to-action">
-        <div class="fo-content">
-            <h1>Segera Hubungi Kami</h1>
-            <p>Jangan lewatkan kesempatan untuk mengabadikan momen Anda dengan fotografer profesional kami. Hubungi kami sekarang juga!</p>
-            <a href="#" class="btn">HUBUNGI SEKARANG</a>
-        </div>
-    </section>
-</main>
+                <div class="quote">
+                    "Foto-foto saya terlihat luar biasa bersama Fotografi Pro."
+                    <div class="author-info">
+                        <img src="assets/author.jpeg" alt="author" class="author-photo">
+                        <div class="author">Adinda R.</div>
 
-<footer>
-    <p>Fotografi Pro</p>
-    <ul>
-        <li><a href="#">Syarat dan Ketentuan</a></li>
-        <li><a href="#">Kebijakan Privasi</a></li>
-    </ul>
-    <p>&copy; 2024 Fotografi Pro</p>
-</footer>
-<script
-    src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"
-    integrity="sha512-24XP4a9KVoIinPFUbcnjIjAjtS59PUoxQj3GNVpWc86bCqPuy3YxAcxJrxFCxXe4GHtAumCbO2Ze2bddtuxaRw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script>
-    feather.replace()
-  </script>
-<script src="js/script.js"></script>
+                        <p>Ibu Rumah Tangga, 27 th</p>
+                    </div>
+                </div>
+                <h2 class="subsection-title">Manfaat Memilih Layanan Fotografi Kami:</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-feather="camera"></i>
+                        </div>
+                        <div class="feature-description">Foto Berkualitas Tinggi</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-feather="camera"></i>
+                        </div>
+                        <div class="feature-description">Peralatan Profesional</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-feather="camera"></i>
+                        </div>
+                        <div class="feature-description">Tim Berpengalaman</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-feather="camera"></i>
+                        </div>
+                        <div class="feature-description">Paket Kustom</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-col">
+                <form id="contactForm">
+                    <h2>Hubungi Kami</h2>
+                    <p>Admin akan menghubungi Anda dalam 1x24 jam setelah data kami terima.</p>
+                    <label for="name">Nama Anda:</label>
+                    <input type="text" id="name" placeholder="Nama depan dan belakang" required>
+                    <label for="phone">Nomor HP Anda:</label>
+                    <input type="tel" id="phone" placeholder="Nomor HP" pattern="[0-9]{10,13}" required>
+                    <label for="interest">Apa yang Anda minati?</label>
+                    <select id="interest" required>
+                        <option value="">Pilih opsi</option>
+                        <option value="option1">Hemat</option>
+                        <option value="option2">Standar</option>
+                        <option value="option3">Premium</option>
+                    </select>
+                    <button type="submit">KIRIM</button>
+                </form>
+            </div>
+        </div>
+        <section id="portofolio" class="portfolio">
+            <h2>Portofolio Kami</h2>
+            <div class="portfolio-filter">
+                <button data-filter="all">Semua</button>
+                <button data-filter="wedding">Pernikahan</button>
+                <button data-filter="event">Event</button>
+                <button data-filter="family">Keluarga</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="wedding">
+                    <img src="assets/portofolio/wedding1.jpeg" alt="Pernikahan 1">
+                    <div class="portfolio-caption">Pernikahan Elegan</div>
+                </div>
+                <div class="portfolio-item" data-category="wedding">
+                    <img src="assets/portofolio/wedding2.jpeg" alt="Pernikahan 2">
+                    <div class="portfolio-caption">Pernikahan Elegan</div>
+                </div>
+                <div class="portfolio-item" data-category="wedding">
+                    <img src="assets/portofolio/wedding3.jpeg" alt="Pernikahan 3">
+                    <div class="portfolio-caption">Pasangan Serasi</div>
+                </div>
+                <div class="portfolio-item" data-category="event">
+                    <img src="assets/portofolio/event1.jpeg" alt="Event 1">
+                    <div class="portfolio-caption">Event Lazmall</div>
+                </div>
+                <div class="portfolio-item" data-category="event">
+                    <img src="assets/portofolio/event2.jpeg" alt="Event 1">
+                    <div class="portfolio-caption">Event Honda</div>
+                </div>
+                <div class="portfolio-item" data-category="event">
+                    <img src="assets/portofolio/event3.jpeg" alt="Event 1">
+                    <div class="portfolio-caption">Event Yamaha</div>
+                </div>
+                <div class="portfolio-item" data-category="family">
+                    <img src="assets/portofolio/k1.jpeg" alt="Keluarga 1">
+                    <div class="portfolio-caption">Foto Studio Keluarga</div>
+                </div>
+                <div class="portfolio-item" data-category="family">
+                    <img src="assets/portofolio/k2.jpeg" alt="Keluarga 1">
+                    <div class="portfolio-caption">Foto Studio Keluarga</div>
+                </div>
+                <div class="portfolio-item" data-category="family">
+                    <img src="assets/portofolio/k3.jpeg" alt="Keluarga 1">
+                    <div class="portfolio-caption">Foto Studio Keluarga</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="paket-kami" class="packages">
+            <h2>Paket Kami</h2>
+            <div class="packages-container">
+                <div class="package-item">
+                    <h3>Paket Hemat</h3>
+                    <p class="package-price">Rp700.000</p>
+                    <p class="package-description">
+                        Paket dasar dengan sesi foto selama 1 jam, 20 foto editan, dan album digital.
+                    </p>
+                    <button class="btn-primary">Pilih Paket</button>
+                </div>
+                <div class="package-item">
+                    <h3>Paket Standar</h3>
+                    <p class="package-price">Rp1.500.000</p>
+                    <p class="package-description">
+                        Paket ini menawarkan sesi foto selama 3 jam, 50 foto editan, album digital, dan print foto ukuran 4R.
+                    </p>
+                    <button class="btn-primary">Pilih Paket</button>
+                </div>
+                <div class="package-item">
+                    <h3>Paket Premium</h3>
+                    <p class="package-price">Rp3.500.000</p>
+                    <p class="package-description">
+                        Paket lengkap dengan sesi foto selama 6 jam, 100 foto editan, album digital premium, print foto ukuran 8R, dan sesi tambahan untuk video pendek.
+                    </p>
+                    <button class="btn-primary">Pilih Paket</button>
+                </div>
+            </div>
+        </section>
+        <section id="hubungi-kami" class="call-to-action">
+            <div class="fo-content">
+                <h1>Segera Hubungi Kami</h1>
+                <p>Jangan lewatkan kesempatan untuk mengabadikan momen Anda dengan fotografer profesional kami. Hubungi kami sekarang juga!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Fotografi Pro</p>
+        <ul>
+            <li><a href="#">Syarat dan Ketentuan</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+        <p>&copy; 2024 Fotografi Pro</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" integrity="sha512-24XP4a9KVoIinPFUbcnjIjAjtS59PUoxQj3GNVpWc86bCqPuy3YxAcxJrxFCxXe4GHtAumCbO2Ze2bddtuxaRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
